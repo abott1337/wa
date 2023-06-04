@@ -1,0 +1,94 @@
+.weather-app-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.weather-app {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: rgb(91, 90, 90);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin-bottom: 0;
+}
+
+.header,
+.row {
+    color: gray;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+img {
+    float: left;
+    margin-right: 10px;
+}
+
+#number {
+    position: relative;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 60px;
+    top: 15px;
+}
+
+.units {
+    position: relative;
+    font-size: 16px;
+    top: -5px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-form form {
+    width: 100%;
+    display: flex;
+    margin: 0 auto 10px auto;
+}
+
+.search-form input {
+    flex: 1;
+}
+
+button {
+    margin: 3px;
+}
+
+.col-6 {
+    text-align: left;
+    left: 10px;
+    top: -5px;
+}
+
+.weather-roll {
+    margin-top: 20px;
+}
+
+.col-2 {
+    font-size: 16px;
+    text-align: center;
+}
+
+p {
+    font-weight: bold;
+    margin-left: 12px;
+}
+
+.max-temp {
+    font-weight: bold;
+    color: rgb(73, 73, 73);
+    margin-left: 3px;
+}

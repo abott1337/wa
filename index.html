@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="weather-app-wrapper">
+        <div class="weather-app">
+            <div class="search-form">
+                <form class="form-inline">
+                    <input id="cityInput" type="text" class="form-control mr-2" placeholder="Type a city" />
+                    <button type="submit" class="btn btn-primary" id="search-button">
+                        Search
+                    </button>
+                    <button type="submit" class="btn btn-dark" id="current-button">
+                        Current
+                    </button>
+                </form>
+            </div>
+
+            <h1 id="city">New York</h1>
+            <div class="header">
+                <ul>
+                    <li id="current-day">Friday</li>
+                    <li id="description">Clear</li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weathericon" id="icon" />
+                    <span id="number">12</span>
+                    <span class="units"><a href="#" id="celsius-link" class="active">°C</a> |
+                        <a href="#" id="fahrenheit-link">°F</a></span>
+                </div>
+                <div class="col-6">
+                    <ul>
+                        <li>Visibility: <span id="visibility">10</span></li>
+                        <li>Humidity: <span id="humidity">50</span>%</li>
+                        <li>Wind: <span id="wind">10</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="weather-roll" id="weather-roll">
+                <!-- <div class="row">
+            <div class="col-2">
+              <p>Thur</p>
+              <img
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt="forcast-icon"
+                width="80px"
+              />
+
+              <span class="max-temp">18°</span>
+              <span class="min-temp">12°</span>
+            </div>
+          </div>
+        </div> -->
+            </div>
+            <small>
+                <a href="https://github.com/abott1337/wa">Open-source code
+                </a>
+                by Angela
+            </small>
+        </div>
+
+        <script src="src/app.js"></script>
+</body>
+
+</html>
