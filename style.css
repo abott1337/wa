@@ -1,93 +1,142 @@
 body {
-    font-family: arial, sans-serif;
+  padding-top: 150px;
+  font-family: "Ubuntu", sans-serif;
+  color: #505050;
+  background: rgba(194, 175, 201, 0.5);
+  background-position: cover;
 }
 
-h1 {
-    color: #878787;
-    font-size: 24px;
-    font-weight: 100;
-    line-height: 28px;
-    margin-bottom: 0;
+form {
+  padding-bottom: 10px;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 40px;
+  width: 550px;
+  padding: 20px 20px;
+  background: rgba(193, 185, 200, 0.85);
+  box-shadow: 0px 0px 20px 20px #a0a0a0;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
+.currentButton {
+  border-radius: 5px;
+  border-style: none;
+  padding: 1px 12px;
+  background: rgba(237, 237, 237, 0.5);
+}
+.currentButton:hover {
+  background-color: rgb(214, 214, 214);
+  transition: all 150ms ease-in-out;
+  background: rgba(202, 202, 202, 0.5);
+}
+
+.searchButton {
+  border-radius: 10px;
+  border-style: none;
+  padding: 3px 10px;
+  background: rgba(138, 138, 138, 0.5);
+}
+.searchButton:hover {
+  background-color: rgb(214, 214, 214);
+  transition: all 150ms ease-in-out;
+  background: rgba(75, 75, 75, 0.5);
+}
+
+#icon {
+  position: relative;
+  bottom: 15px;
+  right: 20px;
+}
+
+#number {
+  font-size: 70px;
+  position: relative;
+  right: 40px;
+  top: 5px;
+}
+
+#degrees {
+  position: relative;
+  font-size: 20px;
+  bottom: 35px;
+  right: 40px;
+}
+
+#c {
+  text-decoration: none;
+  color: #777777;
+}
+#c:hover {
+  text-decoration: underline;
+  color: #525252;
+}
+
+#f {
+  text-decoration: none;
+  color: #777777;
+}
+#f:hover {
+  text-decoration: underline;
+  color: #525252;
 }
 
 li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    color: rgb(135, 135, 135);
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 19px;
+  list-style: none;
 }
 
-li:first-letter {
-    text-transform: capitalize;
+.col-2 {
+  text-align: center;
 }
 
-.weather-app-wrapper {
-    max-width: 600px;
-    margin: 30px auto;
+.fa-cloud-sun {
+  font-size: 30px;
+}
+.fa-cloud {
+  font-size: 30px;
+}
+.fa-cloud-rain {
+  font-size: 30px;
 }
 
-.weather-app {
-    padding: 20px;
-    border: 1px solid #dadde1;
-    border-radius: 5px;
+.codedBy {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: rgb(255, 255, 255);
 }
 
-.overview {
-    margin-bottom: 20px;
+.linkedIn {
+  text-decoration: none;
+  color: rgb(234, 201, 255);
 }
 
-.weather-temperature img {
-    margin-right: 5px;
-    height: 64px;
-    width: 64px;
+.linkedIn:hover {
+  text-decoration: underline;
 }
 
-.weather-temperature strong {
-    color: rgb(33, 33, 33);
-    font-size: 64px;
-    line-height: 1;
-    font-weight: 400;
+.gitHub {
+  text-decoration: none;
+  color: rgb(234, 201, 255);
 }
 
-.weather-temperature .units {
-    position: relative;
-    font-size: 16px;
-    top: -34px;
+.gitHub:hover {
+  text-decoration: underline;
 }
 
-.weather-temperature .active {
-    color: rgb(33, 33, 33);
-    cursor: default;
+.netlify {
+  text-decoration: none;
+  color: rgb(234, 201, 255);
 }
 
-.weather-temperature .active:hover {
-    text-decoration: none;
+.netlify:hover {
+  text-decoration: underline;
 }
 
-.weather-forecast {
-    margin-top: 20px;
-    text-align: center;
-    color: #000;
+.forecast-max {
+  font-size: 12px;
 }
 
-.weather-forecast-date {
-    font-size: 16px;
-    opacity: 0.5;
-}
-
-.weather-forecast-temperature-min {
-    opacity: 0.5;
-}
-
-.weather-forecast-temperatures {
-    font-size: 13px;
+.forecast-min {
+  font-size: 12px;
 }
