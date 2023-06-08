@@ -64,7 +64,7 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   console.log(coordinates);
-  let apiKey = "a5acb752426cd8188485c35694980e3a";
+  let apiKey = "cb286bad3607984b41ed10c8de5cf00e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
@@ -80,10 +80,10 @@ function displayWeatherCondition(response) {
 
   getForecast(response.data.coord);
 
-  let maxTemperature = document.querySelector("#forecast-max");
-  maxTemperature.innerHTML = Math.round(response.data.main.temp_max);
-  let minTemperature = document.querySelector("#forecast-min");
-  minTemperature.innerHTML = Math.round(response.data.main.temp_min);
+  //let maxTemperature = document.querySelector("#forecast-max");
+  //maxTemperature.innerHTML = Math.round(response.data.main.temp_max);
+  //let minTemperature = document.querySelector("#forecast-min");
+  //minTemperature.innerHTML = Math.round(response.data.main.temp_min);
 
   console.log(response.data);
 
@@ -96,7 +96,7 @@ function displayWeatherCondition(response) {
 }
 
 function search(city) {
-  let apiKey = "a5acb752426cd8188485c35694980e3a";
+  let apiKey = "cb286bad3607984b41ed10c8de5cf00e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
@@ -110,10 +110,10 @@ function handleSubmit(event) {
 let form = document.querySelector("#searchBar");
 form.addEventListener("submit", handleSubmit);
 
-search("Tokyo");
+search("Williamsburg");
 
 function searchLocation(position) {
-  let apiKey = "a710bd8bd76400c9658ef649d9e81728";
+  let apiKey = "cb286bad3607984b41ed10c8de5cf00e";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
@@ -147,12 +147,11 @@ fahrenheit.addEventListener("click", changeF);
 let celcius = document.querySelector("#c");
 celcius.addEventListener("click", changeC);
 
+//let lat = "37.2707";
+//let lon = "-76.7075";
+//let part = "current";
+//let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&exclude=${part}&appid=${apiKey}&units=metric`;
 
-let lat = "37.270702";
-let lon = "-76.707458";
-let part = "current";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&exclude=${part}&appid=${apiKey}&units=metric`;
+//function showTemperature(response) {}
 
-function showTemperature(response) {}
-
-axios.get(apiUrl).then(showTemperature);
+//axios.get(apiUrl).then(showTemperature);
