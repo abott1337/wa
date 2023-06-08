@@ -1,65 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
 
-    <link rel="stylesheet" href="src/style.css" />
-    <title>Weather App</title>
-</head>
-
-<body>
+    <title>My Weather App</title>
+  </head>
+  <body>
     <div class="container">
-        <div class="weather-app-wrapper">
-            <div class="weather-app">
-                <form id="search-form" class="mb-3">
-                    <div class="row">
-                        <div class="col-9">
-                            <input type="search" placeholder="Type a city.." class="form-control" id="city-input"
-                                autocomplete="off" />
-                        </div>
-                        <div class="col-3">
-                            <input type="submit" value="Search" class="btn btn-primary w-100" />
-                        </div>
-                    </div>
-                </form>
-                <div class="overview">
-                    <h1 id="city"></h1>
-                    <ul>
-                        <li>Last updated: <span id="date"></span></li>
-                        <li id="description"></li>
-                    </ul>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="clearfix weather-temperature">
-                            <img src="" alt="Clear" id="icon" class="float-left" />
-                            <div class="float-left">
-                                <strong id="temperature"></strong><span class="units"> °C</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <ul>
-                            <li>Humidity: <span id="humidity"></span>%</li>
-                            <li>Wind: <span id="wind"></span> km/h</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="weather-forecast" id="forecast"></div>
-            </div>
-            <small>
-                <a href="https://github.com/abott1337/wa" target="_blank">Open-source code</a>
-                by Angela
-            </small>
-        </div>
-    </div>
-    <script src="src/app.js"></script>
-</body>
+      <form id="searchBar">
+        <input
+          type="search"
+          placeholder="Enter location"
+          autocomplete="off"
+          autofocus="on"
+          id="search-text-input"
+        />
+        <input type="submit" value="Search" class="searchButton" />
+      </form>
+      <button class="currentButton" id="cLButton">Current Location</button>
 
+      <div class="row">
+        <div class="col">
+          <h1>
+            <span id="city"></span> <br />
+            <span><img src="" id="icon" /></span>
+            <span id="number"></span>
+            <span id="degrees"
+              ><a href="#" id="c">°C</a> | <a href="#" id="f">°F</a></span
+            >
+          </h1>
+        </div>
+        <div class="col-4">
+          <ul>
+            <li id="dayAndTime">#</li>
+            <li>Condition -</li>
+            <li id="description"></li>
+          </ul>
+        </div>
+      </div>
+      <span id="conditions"
+        >Humidity: <span id="humidity"></span>% | Wind:
+        <span id="wind"></span>km/h
+      </span>
+
+      <br />
+      <br />
+      <div id="forecast">
+        
+        </div>
+      </div>
+    </div>
+    <footer class="codedBy">
+       Coded by
+      <a
+        href="https://www.linkedin.com/in/angela-botticello-70853321a/"
+        class="linkedIn"
+        target="_blank"
+        >Angela</a
+      >
+       Open-sourced on
+      <a
+        href="https://github.com/abott1337/wa"
+        class="gitHub"
+        target="_blank"
+        >GitHub</a
+      >
+      and hosted on
+      <a
+        href="https://spectacular-eclair-70dccd.netlify.app/"
+        class="netlify"
+        target="_blank"
+        >Netlify</a
+      >
+          </footer>
+
+    <script
+      src="https://kit.fontawesome.com/6c8298e853.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/script.js"></script>
+  </body>
 </html>
+          
