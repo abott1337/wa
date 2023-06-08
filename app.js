@@ -80,10 +80,10 @@ function displayWeatherCondition(response) {
 
   getForecast(response.data.coord);
 
-  //let maxTemperature = document.querySelector("#forecast-max");
-  //maxTemperature.innerHTML = Math.round(response.data.main.temp_max);
-  //let minTemperature = document.querySelector("#forecast-min");
-  //minTemperature.innerHTML = Math.round(response.data.main.temp_min);
+  let maxTemperature = document.querySelector("#forecast-max");
+  maxTemperature.innerHTML = Math.round(response.data.main.temp_max);
+  let minTemperature = document.querySelector("#forecast-min");
+  minTemperature.innerHTML = Math.round(response.data.main.temp_min);
 
   console.log(response.data);
 
@@ -147,13 +147,12 @@ fahrenheit.addEventListener("click", changeF);
 let celcius = document.querySelector("#c");
 celcius.addEventListener("click", changeC);
 
-////////////////////
 
-//let lat = "37.270702";
-//let lon = "-76.707458";
-//let part = "current";
-//let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&exclude=${part}&appid=${apiKey}&units=metric`;
+let lat = "37.270702";
+let lon = "-76.707458";
+let part = "current";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&exclude=${part}&appid=${apiKey}&units=metric`;
 
-//function showTemperature(response) {}
+function showTemperature(response) {}
 
-//axios.get(apiUrl).then(showTemperature);
+axios.get(apiUrl).then(showTemperature);
