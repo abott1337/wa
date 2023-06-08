@@ -3,6 +3,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   color: #505050;
   background: rgba(194, 175, 201, 0.5);
+  background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
   background-position: cover;
 }
 
